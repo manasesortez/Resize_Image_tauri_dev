@@ -23,52 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-/* 
-    imgForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        console.log('Enviando imagen');
-
-        const width = parseInt(widthInput.value, 10);
-        const height = parseInt(heightInput.value, 10);
-
-        if (isNaN(width) || isNaN(height)) {
-            alert('Por favor, ingrese valores válidos para ancho y alto.');
-            return;
-        }
-
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            const img = new Image();
-            img.src = e.target.result;
-
-            img.onload = function () {
-                // Set the width and height inputs with the image dimensions
-                widthInput.value = img.width;
-                heightInput.value = img.height;
-
-                // Resize the image to user-specified dimensions
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                canvas.width = parseInt(widthInput.value);
-                canvas.height = parseInt(heightInput.value);
-
-                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-                // Save the resized image
-                const link = document.createElement('a');
-                link.href = canvas.toDataURL('image/jpeg');
-                link.download = 'resized_image.jpg';
-                link.click();
-
-                // Set the filename in the span
-                filenameSpan.textContent = file.name;
-            };
-        };
-
-        reader.readAsDataURL(file);
-    }); */
 });
 
 function resizeImage() {
